@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BreakDownActivity" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_equal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_button_background"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="Equal Breakdown"
+                    android:onClick="onEqualClick"/>
+
+                <RadioButton
+                    android:id="@+id/rb_percentange"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_button_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="Percentage Breakdown"
+                    android:onClick="onPercentageClick"/>
+
+                <RadioButton
+                    android:id="@+id/rb_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_button_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="Amount Breakdown"
+                    android:onClick="onAmountClick"/>
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/tv_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New Equal Breakdown"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:padding="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="12dp"
+                        android:text="@string/tv_title" />
+
+                    <TextView
+                        android:id="@+id/tv_whoPays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="12dp"
+                        android:text="@string/tv_whoPays" />
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="12dp"
+                        android:text="@string/tv_date" />
+
+                    <TextView
+                        android:id="@+id/tv_bill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="12dp"
+                        android:text="@string/tv_bill" />
+
+                    <TextView
+                        android:id="@+id/tv_noOfPpl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="12dp"
+                        android:text="@string/tv_noOfPpl" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/et_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        tools:ignore="SpeakableTextPresentCheck"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"/>
+
+                    <EditText
+                        android:id="@+id/et_whoPays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"/>
+
+                    <Button
+                        android:id="@+id/bt_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="JAN 01 2023"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        style="?android:spinnerStyle"
+                        android:paddingLeft="15sp"
+                        android:onClick="onOpenDatePickerClick"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"/>
+
+                    <EditText
+                        android:id="@+id/et_bill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"/>
+
+                    <EditText
+                        android:id="@+id/et_noOfPpl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:visibility="gone"
+                android:id="@+id/ll_percentage">
+
+                <TextView
+                    android:id="@+id/tv_percentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Percentage"
+                    android:textStyle="bold"/>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_addPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bt_addPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Percentage"
+                    android:onClick="onAddPercentageClick"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:visibility="gone"
+                android:id="@+id/ll_amount">
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amount"
+                    android:textStyle="bold"/>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_addAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bt_addAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Amount"
+                    android:onClick="onAddAmountClick"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_createEqual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create Equal Breakdown" />
+
+            <Button
+                android:id="@+id/bt_createPercentage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create Percentage Breakdown"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/bt_createAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create Amount Breakdown"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

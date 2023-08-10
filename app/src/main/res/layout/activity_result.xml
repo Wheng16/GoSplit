@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ResultActivity"
+    android:gravity="center">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:paddingBottom="20dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Breakdown Successful"
+                android:textColor="#008000"
+                android:gravity="center"
+                android:padding="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_title"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tv_titleValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_whoPays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_whoPays"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tv_whoPaysValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_date"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tv_dateValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_bill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_bill"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tv_billValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tv_noOfPpl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_noOfPpl"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tv_noOfPplValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:id="@+id/ll_result">
+
+                <TextView
+                    android:id="@+id/tv_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Breakdown Result"
+                    android:gravity="center"
+                    android:textColor="#FF0000"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OK" />
+
+            <Button
+                android:id="@+id/bt_saveResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save result" />
+
+            <Button
+                android:id="@+id/bt_shareResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Share Result via Email" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

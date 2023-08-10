@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GoSplit</string>
+    <string name="tv_title">Title</string>
+    <string name="tv_whoPays">Who Pays</string>
+    <string name="tv_date">Date</string>
+    <string name="tv_bill">Total Bill</string>
+    <string name="tv_noOfPpl">Number of People</string>
+</resources>
