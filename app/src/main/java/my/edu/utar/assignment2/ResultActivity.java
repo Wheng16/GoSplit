@@ -169,7 +169,7 @@ public class ResultActivity extends AppCompatActivity {
 
         if(eachPersonPays != null){
             TextView textView = new TextView(this);
-            textView.setText("RM" + eachPersonPays);
+            textView.setText(eachPersonPays);
             textView.setId(View.generateViewId());
             textView.setGravity(Gravity.CENTER);
 
